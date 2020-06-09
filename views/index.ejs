@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/stylesheets/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+<style>
+body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+.w3-row-padding img {margin-bottom: 12px}
+/* Set the width of the sidebar to 120px */
+.w3-sidebar {width: 120px;background: #222;}
+/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+#main {margin-left: 120px}
+/* Remove margins from "page content" on small screens */
+@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+</style>
+
+<body class="w3-black">
+
+<!-- Icon Bar (Sidebar - hidden on small screens) -->
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+  <!-- Avatar image in top left corner -->
+  <img src="/images/logo.jpg" style="width:90%">
+  
+  
+  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
+    <i class="fa fa-home w3-xxlarge"></i>
+    <p>HOME</p>
+  </a>
+  <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-user w3-xxlarge"></i>
+    <p>ABOUT</p>
+  </a>
+  <a href="#project" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-eye w3-xxlarge"></i>
+    <p>PROJECTS</p>
+  </a>
+  <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-envelope w3-xxlarge"></i>
+    <p>INFO</p>
+  </a>
+    <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-user w3-xxlarge"></i>
+    <p>ATLIB</p>
+  </a>
+  
+</nav>
+
+<!-- Navbar on small screens (Hidden on medium and large screens) -->
+<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+    <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
+    <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
+    <a href="#project" class="w3-bar-item w3-button" style="width:25% !important">PROJECTS</a>
+    <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
+  </div>
+</div>
+
+
+<!-- Page Content -->
+<div class="w3-padding-large" id="main">
+  <!-- Header/Home -->
+  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+    <h1 class="w3-jumbo"><span class="w3-hide-small">BZE</span> Student Info</h1>
+    <p>Belize information about Atlib.</p>
+    <img src="/images/logo.jpg" alt="boy" class="w3-image" width="992" height="1108">
+  </header>
+  
+  
+  
+  
+  
+  
+  <div class="row">
+	<div class="column">
+<h2> Belize District </h2>
+<p id="demo"></p>
+
+
+
+
+
+<p><button class="w3-button w3-white w3-padding-large w3-hover-black;" onclick="Corozal()">Corozal</button><br></p>
+<p><button class="w3-button w3-white w3-padding-large w3-hover-black;"onclick="OrangeWalk()">Orange Walk</button><br></p>
+<p><button class="w3-button w3-white w3-padding-large w3-hover-black;" onclick="Belize()">Belize</button><br></P> 
+<p><button class="w3-button w3-white w3-padding-large w3-hover-black;" onclick="Cayo()">Cayo</button><br></p>
+<p><button class="w3-button w3-white w3-padding-large w3-hover-black;" onclick="StannCreek()">Stann Creek</button><br></p>
+<p><button class="w3-button w3-white w3-padding-large w3-hover-black;"onclick="Toledo()">Toledo</button><br></p>
+
+</div>
+
+  
+  
+
+
+
+
+
+
+<script>
+function Belize()
+{
+ document.getElementById("demo").innerHTML ='<img src=/images/Belize.jpg width="200" height="300" align="right">';
+}
+</script>
+<script>
+function Cayo()
+ {
+ document.getElementById("demo").innerHTML ='<img src=/images/cayo.jpg width="150" height="300" align="right">';
+}
+</script>
+<script>
+function Corozal()
+ {
+ document.getElementById("demo").innerHTML ='<img src=/images/Corozal.jpg width="150" height="300" align="right">';
+}
+</script>
+<script>
+function OrangeWalk()
+ {
+ document.getElementById("demo").innerHTML ='<img src=/images/OrangeWalk.png width="150" height="300" align="right">';
+}
+</script>
+<script>
+function StannCreek()
+ {
+ document.getElementById("demo").innerHTML ='<img src=/images/StannCreek.jpg width="150" height="300" align="right">';
+}
+</script>
+<script>
+function Toledo()
+{
+ document.getElementById("demo").innerHTML ='<img src=/images/Toledo.png width="150" height="300" align="right">';
+}
+
+</script>
+
+  <div class="column">
+    <h2></h2>
+   <h2>ATLIB English SCORES</h2>
+   <center>
+<% if(results.length) { %>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col"></th>
+                    <th scope="col">DISTRICT</th>
+                    <th scope="col">ATLIB English AVERAGE</th>
+                    <th width="200px"></th>
+                </tr>
+            </thead>
+            <tbody>
+             <% results.forEach(function(r) { %>
+                <tr>
+				
+                    <th scope="row"></th>
+                   <td><%= r.district %></td>
+                    <td><center><%= r.avg %><center></td>
+                    <td>
+                        
+                    </td>
+                </tr>
+            <% }); %>
+            </tbody>
+        </table>
+        <% } %>
+
+        <!-- if result is empty -->
+        <% if(!results.length) { %>
+            <p class="text-center">No record found!</p>
+        <% } %>
+    </center>
+	
+  </div>
+    </div>
+      <div class="column ">
+
+        <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
+          <li class="w3-dark-grey w3-xlarge w3-padding-32">ATLIB English SCORES</li>
+
+<p><a href="/pfunding">Funding</a></p>
+<p><a href="/pmunicipality">Municipality</a></p>
+<p><a href="/pur">Urban/Rural</a></p>
+<p><a href="/pmanagement">Management</a></p>
+<p><a href="/pschool">School</a></p>
+
+  
+          <li class="w3-light-grey w3-padding-24">
+		       <p class=" w3-white w3-padding-large w3-hover-black">ATLIB English SCORES</p>
+          </li>
+        </ul>
+      </div>
+  </div>
+</div>
+    <div class="row">
+	  <div class="column">
+	 
+ </div>
+   <div class="column">
+	 
+ </div>
+   <div class="column">
+	 
+ </div>
+ </div>
+   
+    <div class="row">
+	  <div class="column">
+	 
+ </div>
+   <div class="column">
+	 
+ </div>
+   <div class="column">
+	 
+ </div>
+ </div>
+   
+    <div class="row">
+	  <div class="column">
+	 
+ </div>
+ 
+
+ </div>
+    <div class="row">
+	  <div class="column">
+	 
+ </div>
+   <div class="column">
+	 
+ </div>
+   <div class="column">
+	 
+ </div>
+ </div>
+   
+    <div class="row">
+	  <div class="column">
+	 
+ </div>
+   <div class="column">
+	 
+ </div>
+
+ </div>
+   
+    <div class="row">
+	  <div class="column">
+	 
+ </div>
+ 
+
+ </div>
+
+
+  <!-- About Section -->
+  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
+    <h2 class="w3-text-light-grey">Overview of education in Belize</h2>
+    <hr style="width:500px" class="w3-opacity" align="left"></hr> 
+    <p>The education system in Belize is has 
+	its roots in the English system but hsas been greatly 
+	influenced by the U.S. academic syllabus primarily through 
+	the influence of the Jesuits. It is no wonder that the best 
+	schools in Belize are Roman Catholic. Students move through forms, from first form
+	in primary school to sixth form (junior college), although some schools, 
+	following U.S. and Caribbean Community practices, use the grade system grades 1-12.
+	However, in this platform, there will only be information of the students ATLIB grades.
+    </p>
+
+
+  <!-- End About Section -->
+  </div>
+  
+  <!-- Portfolio Section -->
+  <div class="w3-padding-64 w3-content" id="project">
+    <h2 class="w3-text-light-grey">My Projects</h2>
+    <hr style="width:200px" class="w3-opacity">
+
+    <!-- Grid for project -->
+    <div class="w3-row-padding" style="margin:0 -16px">
+
+
+	        <div class="w3-third">
+  <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
+          <li class="w3-dark-grey w3-xlarge w3-padding-32"><td><i class="fa fa-users w3-text-orange w3-large"></i></td> ATLIB <td><i class="fa fa-users w3-text-orange w3-large"></i></td> 
+          <li class="w3-padding-16">ALL DISTRICTS</li>
+		  <li class="w3-padding-16">Funding</li>
+          <li class="w3-padding-16">Municipality</li>
+          <li class="w3-padding-16">Urban/Rural</li>
+		  <li class="w3-padding-16">Management</li>
+		  <li class="w3-padding-16">School</li>
+          <li class="w3-light-grey w3-padding-24">
+            <a href="#BJAT" <button class="w3-button w3-white w3-padding-large w3-hover-black;" >ATLIB</button></a>
+          </li>
+        </ul>
+      </div>
+	  
+    <!-- End photo grid -->
+    </div>
+  <!-- End Portfolio Section -->
+  </div>
+
+      </div>
+
+	<!-- End Grid/Pricing tables -->
+    </div>
+</div>
+  <!-- Contact Section -->
+  <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
+    <h2 class="w3-text-light-grey">Contact Me</h2>
+    <hr style="width:200px" class="w3-opacity">
+
+    <div class="w3-section">
+      <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Belmopan, Belize</p>
+      <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Phone: +501 635-7375</p>
+      <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: mavila68@yahoo.com</p>
+    </div><br>
+
+      </p>
+    </form>
+  <!-- End Contact Section -->
+  </div>
+    <!-- Footer -->
+  <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+    <p class="w3-medium">Powered by <a href="https://www.ub.edu.bz" target="_blank" class="w3-hover-text-green">University Of Belize</a></p>
+  <!-- End footer -->
+  </footer>
+
+<!-- END PAGE CONTENT -->
+</div>
+
+</body>
+</html>
